@@ -93,7 +93,7 @@ saasify/
 
 2. **Install dependencies**
    ```bash
-   npm install --legacy-peer-deps
+   npm install
    # or
    yarn install
    ```
