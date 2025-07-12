@@ -138,7 +138,7 @@ export const PricingSection = () => {
   return (
     <section ref={sectionRef} id="pricing" className="py-20 bg-muted/30">
       <div className="container">
-        <div className="max-w-6xl mx-auto">
+        <div className="mx-auto">
           {/* Section Header */}
           <div ref={headerRef} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -151,7 +151,7 @@ export const PricingSection = () => {
           </div>
 
           {/* Pricing Cards */}
-          <div ref={cardsRef} className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div ref={cardsRef} className="grid lg:grid-cols-3 md:grid-cols-2 items-center justify-center gap-8 max-w-5xl mx-auto">
             {plans.map((plan, index) => (
               <div 
                 key={plan.name}

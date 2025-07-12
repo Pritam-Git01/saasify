@@ -28,7 +28,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Sarah Chen",
     role: "Lead Developer at TechCorp",
     company: "TechCorp",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+    avatar: "https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGVyc29ufGVufDB8fDB8fHww",
     content: "This platform completely transformed our deployment process. What used to take hours now takes seconds. The team loves how simple it is to use.",
     rating: 5
   },
@@ -153,7 +153,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   return (
     <section 
       ref={sectionRef} 
-      className={`py-20 bg-gray-50 ${className}`}
+      className={`py-20 bg-muted/30 ${className}`}
       aria-label="Customer testimonials"
     >
       <div className="max-w-6xl mx-auto px-4">
@@ -163,12 +163,12 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
           className={headerClasses}
         >
           <h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6"
             id="testimonials-heading"
           >
-            Loved by <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">developers</span>
+            Loved by <span className="gradient-text">developers</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
             See what our customers have to say about their experience with our platform.
           </p>
         </div>
@@ -191,7 +191,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
             <div 
               key={testimonial.id}
               ref={(el) => setCardRef(el, index)}
-              className={`bg-white p-6 rounded-xl shadow-lg border border-gray-200 group cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${
+              className={`p-6 rounded-xl feature-card shadow-lg border border-gray-200 group cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${
                 isVisible || prefersReducedMotion ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               role="listitem"
@@ -267,7 +267,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
             Trusted by 10,000+ developers worldwide
           </p>
           <div 
-            className="flex justify-center items-center space-x-8 opacity-60"
+            className="flex justify-center flex-wrap items-center space-x-8 opacity-60"
             role="list"
             aria-label="Trusted by these companies"
           >

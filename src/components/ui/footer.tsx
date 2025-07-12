@@ -78,7 +78,7 @@ export const Footer = () => {
               <p className="text-neutral-400 text-sm mb-4">
                 Get the latest news and updates delivered to your inbox.
               </p>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap justify-center gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"

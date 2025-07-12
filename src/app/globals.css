@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 /* Tailwind Configuration Embedded */
@@ -7,7 +6,7 @@
   --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   --font-family-inter: "Inter", system-ui, sans-serif;
-  --font-family-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-family-sans: var(--font-inter), system-ui, sans-serif;
   --font-family-mono: var(--font-geist-mono), "Fira Code", monospace;
 
   --color-border: hsl(var(--border));
@@ -244,7 +243,7 @@
   body {
     background: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     line-height: 1.6;
     font-feature-settings: "rlig" 1, "calt" 1;
     font-synthesis: none;
@@ -290,7 +289,6 @@
   .container {
     max-width: min(1200px, 100% - 2rem);
     margin-inline: auto;
-    padding-inline: 1rem;
   }
 
   @media (min-width: 640px) {
@@ -371,6 +369,12 @@
     cursor: pointer;
   }
 
+  @media (max-width: 640px) {
+    .feature-card {
+      padding: 1rem;
+    }
+  }
+
   .feature-card:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-0.25rem);
@@ -378,6 +382,10 @@
 
   .dark .feature-card {
     border-color: hsl(var(--neutral-700));
+  }
+
+  button {
+    cursor: pointer;
   }
 
   /* Gradient Text */
